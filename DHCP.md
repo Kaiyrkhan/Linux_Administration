@@ -17,6 +17,9 @@ $ sudo apt install -y isc-dhcp-server
 
 ### DHCP-ды конфигурациялау
 ```shell
+$ ip address
+```
+```shell
 $ sudo nano /etc/default/isc-dhcp-server
 INTERFACESv4="ens3"
 INTERFACESv6=""
