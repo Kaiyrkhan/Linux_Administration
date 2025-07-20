@@ -27,3 +27,11 @@ $ sudo nano /etc/default/isc-dhcp-server
 INTERFACESv4="ens3"
 INTERFACESv6=""
 ```
+
+### Development
+
+To start developing with AdminLTE:
+
+1. **Install dependencies:** `npm install`
+2. **Start development server:** `npm start` *(opens browser at http://localhost:3000)*
+3. **Start coding!** Files auto-compile and refresh on changes
