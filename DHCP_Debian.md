@@ -28,6 +28,7 @@ INTERFACESv4="ens3"
 INTERFACESv6=""
 ```
 
+---
 <details>
 <summary>Толығырақ көру</summary>
 Мұнда толық ақпарат жазылады.  
