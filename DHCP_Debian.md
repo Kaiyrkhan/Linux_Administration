@@ -34,16 +34,7 @@ INTERFACESv6=""
 Мысалы: Cisco құрылғылары тізімі, конфигурация т.б.
 </details>
 
-- [x] Орнату аяқталды
-- [ ] Қосымша модульдер
-- [ ] Тестілеу
-
 > Бұл – дәйексөз.
-
-`Бір жолдық код`
-
-Көп жолды код блок:
-<pre> ```bash sudo apt update sudo apt install nginx ``` </pre>
 
 ### Development
 
