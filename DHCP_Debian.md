@@ -34,6 +34,10 @@ INTERFACESv6=""
 Мысалы: Cisco құрылғылары тізімі, конфигурация т.б.
 </details>
 
+- [x] Орнату аяқталды
+- [ ] Қосымша модульдер
+- [ ] Тестілеу
+
 ### Development
 
 To start developing with AdminLTE:
