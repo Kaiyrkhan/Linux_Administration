@@ -38,6 +38,8 @@ INTERFACESv6=""
 - [ ] Қосымша модульдер
 - [ ] Тестілеу
 
+> Бұл – дәйексөз.
+
 ### Development
 
 To start developing with AdminLTE:
