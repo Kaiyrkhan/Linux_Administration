@@ -1,4 +1,4 @@
-# Linux Administration I
+# Linux Administration II
 
 ### Course Contents
 1) DHCP сервер орнату және конфигурациялау
