@@ -40,6 +40,11 @@ INTERFACESv6=""
 
 > Бұл – дәйексөз.
 
+`Бір жолдық код`
+
+Көп жолды код блок:
+<pre> ```bash sudo apt update sudo apt install nginx ``` </pre>
+
 ### Development
 
 To start developing with AdminLTE:
