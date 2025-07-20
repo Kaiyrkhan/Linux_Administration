@@ -7,7 +7,7 @@
   3) Нәтижені тексеру.
 
 ### Корпоративті желінің топологиясы
-<img width="1205" height="886" alt="Topology_Enterprise_Compus_Network_v1" src="https://github.com/user-attachments/assets/98df986a-2f8e-4002-bfcc-ce0e9e8732d4" />
+![Topology Enterprise Campus Network](Topology_Enterprise_Compus_Network_v1.png)
 
 ### DHCP-ды орнату
 ```shell
