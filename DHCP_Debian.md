@@ -6,8 +6,6 @@
   2) DHCP-ды конфигурациялау;
   3) Нәтижені тексеру.
 
----
-
 ### Корпоративті желінің топологиясы
 ![Topology Enterprise Campus Network](Topology_Enterprise_Compus_Network_v1.png)
 
@@ -29,6 +27,12 @@ $ sudo nano /etc/default/isc-dhcp-server
 INTERFACESv4="ens3"
 INTERFACESv6=""
 ```
+
+<details>
+<summary>Толығырақ көру</summary>
+Мұнда толық ақпарат жазылады.  
+Мысалы: Cisco құрылғылары тізімі, конфигурация т.б.
+</details>
 
 ### Development
 
