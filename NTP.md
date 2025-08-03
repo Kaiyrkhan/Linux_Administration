@@ -33,7 +33,7 @@ $ sudo nano /etc/chrony/chrony.conf
 #pool 2.debian.pool.ntp.org iburst
 
 # Kazakhstan NTP pool
-pool ntp.nic.kz iburst
+server ntp.nic.kz iburst
 pool 2.kz.pool.ntp.org iburst
 
 # Global NTP pool
