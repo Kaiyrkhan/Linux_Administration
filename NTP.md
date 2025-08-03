@@ -1,7 +1,7 @@
 # NTP Server on Linux
 
 #### 🖧 Топология
-![Logical Topology](Topology/Topology_interVLANRouting_NAT_Linux.png)
+![Topology](Topology/Topology_interVLANRouting_NAT_Linux.png)
 
 # NTP Server on Debian
 
