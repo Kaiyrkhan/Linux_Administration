@@ -52,7 +52,7 @@ makestep 1.0 3
 ```
 
 ```shell
-sudo systemctl restart chrony
+$ sudo systemctl restart chrony
 ```
 
 ```shell
@@ -64,6 +64,9 @@ $ dig +short ntp.nic.kz
 $ ping 80.241.0.72
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.7 ms
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.7 ms
+
+$ sudo apt install ntpdate
+$ sudo ntpdate -q 80.241.0.72
 
 $ sudo chronyc tracking
 ```
