@@ -5,6 +5,7 @@
 
 # NTP Server on Debian
 
+#### Configure NTP Server
 ```shell
 $ sudo apt update 
 $ sudo apt install chrony
@@ -78,7 +79,9 @@ allow 172.16.11.0/24
 allow 172.16.12.0/24
 
 $ sudo systemctl restart chrony
-```shell
+```
+
+#### Configure NTP Client
 
 ```shell
 ```
