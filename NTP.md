@@ -28,6 +28,7 @@ $ ping -c2 216.239.35.12
 ```shell
 8-қатарды (Line 8) "#" comment-ге алып, оның орнына Қазақстанға ең жақын NTP Pool серверлердің DNS атауын енгіземіз
 $ sudo nano /etc/chrony/chrony.conf
+
 #pool 2.debian.pool.ntp.org iburst
 
 # Kazakhstan NTP pool
@@ -37,6 +38,21 @@ pool 1.kz.pool.ntp.org iburst
 # Global NTP pool
 pool time.google.com iburst
 pool time.cloudflare.com iburst
+
+# Log settings
+driftfile /var/lib/chrony/chrony.drift
+logdir /var/log/chrony
+log measurements statistics tracking
+
+# RTC синхрондау
+rtcsync
+
+# Уақыт дәлдігін тез реттеу
+makestep 1.0 3
+```
+
+```shell
+sudo systemctl restart chrony
 ```
 
 ```shell
