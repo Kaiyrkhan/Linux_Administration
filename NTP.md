@@ -40,7 +40,6 @@ pool time.google.com iburst
 pool time.cloudflare.com iburst
 
 # Log settings
-driftfile /var/lib/chrony/chrony.drift
 logdir /var/log/chrony
 log measurements statistics tracking
 
@@ -73,7 +72,13 @@ $ sudo chronyc tracking
 ![images](images/images.png)
 
 ```shell
-```
+$ sudo nano /etc/chrony/chrony.conf
+# Allow access for Local Networks
+allow 172.16.11.0/24
+allow 172.16.12.0/24
+
+$ sudo systemctl restart chrony
+```shell
 
 ```shell
 ```
