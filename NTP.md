@@ -20,10 +20,14 @@ $ sudo timedatectl set-timezone Asia/Almaty
 $ dig +short 2.kz.pool.ntp.org
 185.116.194.200
 $ ping -c2 185.116.194.200
+64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.7 ms
+64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.7 ms
 
-$ dig +short time.google.com
-216.239.35.12
-$ ping -c2 216.239.35.12
+$ dig +short ntp.nic.kz
+80.241.0.72
+$ ping -c2 80.241.0.72
+64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.6 ms
+64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.2 ms
 ```
 
 ```shell
