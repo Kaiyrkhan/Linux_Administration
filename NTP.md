@@ -92,6 +92,8 @@ $ sudo systemctl restart chrony
 
 **Firewall конфигурациялау**
 ```shell
+nftables конфигурациясы
+
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.11.0/24 accept
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.12.0/24 accept
 
@@ -99,6 +101,25 @@ $ sudo nft list ruleset
 
 $ sudo nft list ruleset | sudo tee /etc/nftables.conf
 $ sudo systemctl restart nftables
+```
+
+```shell
+iptables конфигурациясы
+
+$ sudo iptables -A INPUT -p udp --dport 123 -s 172.16.11.0/24 -j ACCEPT
+$ sudo iptables -A INPUT -p udp --dport 123 -s 172.16.12.0/24 -j ACCEPT
+$ sudo iptables -A INPUT -p udp --dport 123 -s 127.0.0.1 -j ACCEPT
+
+$ sudo netfilter-persistent save
+$ sudo netfilter-persistent reload
+
+$ sudo iptables -vnL
+```
+
+```shell
+```
+
+```shell
 ```
 
 ## NTP Client on Linux
