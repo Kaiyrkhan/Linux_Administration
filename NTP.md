@@ -16,6 +16,8 @@ Set timezone
 $ sudo timedatectl set-timezone Asia/Almaty
 ```
 
+> NTP Pool Time Servers [Link](https://www.ntppool.org/zone/kz)
+
 ```shell
 $ dig +short 2.kz.pool.ntp.org
 185.116.194.200
