@@ -31,14 +31,14 @@ $ ping -c2 80.241.0.72
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.6 ms
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.2 ms
 ```
-> NTP Pool Time Servers [Link](https://www.ntppool.org/zone/kz)  
+> *NTP Pool Time Servers* [Link](https://www.ntppool.org/zone/kz)  
 
 **NTP серверді конфигурациялау**
 ```shell
 Уақыт белдеуін (Time Zone) өзгерту
 $ sudo timedatectl set-timezone Asia/Almaty
 ```
-> Time Zones in Kazakhstan [Link](https://www.timeanddate.com/time/zone/kazakhstan)
+> *Time Zones in Kazakhstan* [Link](https://www.timeanddate.com/time/zone/kazakhstan)
 
 ```shell
 $ sudo nano /etc/chrony/chrony.conf
