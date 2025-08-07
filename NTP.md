@@ -1,11 +1,11 @@
-# NTP Server on Linux
+# NTP Server
 
-#### 🖧 Топология
+### 🖧 Topology
 ![Topology](Topology/Topology_interVLANRouting_NAT_Linux.png)
 
-# NTP Server on Debian
+## NTP Server on Linux
 
-#### Configure NTP Server
+#### Configure NTP Server on Debian
 ```shell
 $ sudo apt update 
 $ sudo apt install chrony
@@ -33,9 +33,9 @@ $ ping -c2 80.241.0.72
 ```
 
 ```shell
-8-қатарды (Line 8) "#" comment-ге алып, оның орнына Қазақстанға ең жақын NTP Pool серверлердің DNS атауын енгіземіз
 $ sudo nano /etc/chrony/chrony.conf
 
+8-қатарды (Line 8) "#" comment-ге алып, төменгі қатарға Қазақстанға ең жақын NTP сервердің DNS атауын енгіземіз!
 #pool 2.debian.pool.ntp.org iburst
 
 # Kazakhstan NTP pool
@@ -59,6 +59,7 @@ makestep 1.0 3
 ```
 
 ```shell
+Daemon-ды ұайта жүктеу
 $ sudo systemctl restart chrony
 ```
 
