@@ -98,7 +98,7 @@ $ sudo nft list ruleset | sudo tee /etc/nftables.conf
 $ sudo systemctl restart nftables
 ```
 
-#### Configure NTP Client
+#### Configure NTP Client on Linux
 
 ```shell
 Debian/Ubuntu
@@ -128,4 +128,31 @@ $ sudo chronyc tracking
 Уақытты қолмен синхрондау (тексеру үшін)
 $ sudo chronyc makestep
 200 OK
+```
+
+#### Configure NTP Client on Cisco IOS
+
+```shell
+configure terminal
+ntp server 172.16.11.1 prefer        # NTP сервер IP адрес
+clock timezone KZ +5                 # Уақыт белдеуін көрсету
+```
+
+```shell
+NTP сұранысы болатын, нақты интерфейсті көрсету
+ntp source GigabitEthernet0/0
+```
+
+```shell
+Verification
+
+show ntp associations
+show ntp status
+```
+
+```shell
+Access Control List
+
+access-list 10 permit 172.16.11.1
+ntp access-group peer 10
 ```
