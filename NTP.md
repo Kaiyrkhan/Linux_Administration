@@ -130,7 +130,7 @@ $ sudo chronyc makestep
 200 OK
 ```
 
-#### Configure NTP Client on Cisco IOS
+#### Configure NTP Client on Cisco IOS (Router, Switch)
 
 ```shell
 configure terminal
@@ -151,8 +151,33 @@ show ntp status
 ```
 
 ```shell
-Access Control List
+Қосымша қауіпсіздік (Access Control List)
 
 access-list 10 permit 172.16.11.1
 ntp access-group peer 10
+```
+
+#### Configure NTP Client on Huawei VRP (Router, Switch)
+
+```shell
+system-view
+ntp-service enable
+ntp-service unicast-server 172.16.11.1
+
+clock timezone KZ add 5
+```
+
+```shell
+Verification
+
+display ntp-service status
+display ntp-service sessions
+```
+
+```shell
+Қосымша қауіпсіздік (Access Control List)
+
+acl number 2000
+ rule permit ip source 172.16.11.1 0.0.0.0
+ntp-service acl 2000
 ```
