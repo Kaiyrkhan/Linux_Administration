@@ -7,8 +7,12 @@
 
 **chrony пакетін орнату**
 ```shell
+Debian/Ubuntu
 $ sudo apt update 
 $ sudo apt install chrony
+
+RHEL/Rocky
+$ sudo dnf install chrony
 ```
 
 **Қазақстандық NTP серверлерге талдау жасау**
