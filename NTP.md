@@ -135,12 +135,12 @@ $ sudo firewall-cmd --list-all --zone=public
 ```shell
 UFW конфигурациясы (Debian/Ubuntu)
 
+$ sudo ufw enable
+
 $ sudo ufw allow from 172.16.11.0/24 to any port 123 proto udp
 $ sudo ufw allow from 172.16.12.0/24 to any port 123 proto udp
 
 $ sudo ufw deny proto udp from any to any port 123
-
-$ sudo ufw enable
 
 $ sudo ufw status verbose
 ```
