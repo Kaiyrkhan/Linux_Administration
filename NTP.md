@@ -123,5 +123,7 @@ $ sudo chronyc tracking
 ```
 
 ```shell
-sudo chronyc makestep
+Уақытты қолмен синхрондау (тексеру үшін)
+$ sudo chronyc makestep
+200 OK
 ```
