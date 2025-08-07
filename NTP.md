@@ -88,6 +88,16 @@ allow 172.16.12.0/24
 $ sudo systemctl restart chrony
 ```
 
+```shell
+$ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.11.0/24 accept
+$ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.12.0/24 accept
+
+$ sudo nft list ruleset
+
+$ sudo nft list ruleset | sudo tee /etc/nftables.conf
+$ sudo systemctl restart nftables
+```
+
 #### Configure NTP Client
 
 ```shell
