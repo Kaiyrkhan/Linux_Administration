@@ -129,6 +129,7 @@ $ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" port protoco
 
 $ sudo firewall-cmd --reload
 
+$ sudo firewall-cmd --list-rich-rules
 $ sudo firewall-cmd --list-all --zone=public
 ```
 
