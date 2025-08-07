@@ -141,7 +141,6 @@ $ sudo ufw deny proto udp from any to any port 123
 
 $ sudo ufw status verbose
 ```
-> UFW - Uncomplicated Firewall  
 
 ## NTP Client on Linux
 
