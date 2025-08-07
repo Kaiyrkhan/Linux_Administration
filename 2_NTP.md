@@ -1,7 +1,8 @@
 # NTP Server
 
 ### 🖧 Topology
-![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)
+![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)  
+[Download Link for PNETLab Topology File](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.unl)
 
 ## NTP Server on Linux
 
