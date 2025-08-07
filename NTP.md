@@ -5,19 +5,13 @@
 
 ## NTP Server on Linux
 
-#### Configure NTP Server on Debian
+**chrony пакетін орнату**
 ```shell
 $ sudo apt update 
 $ sudo apt install chrony
 ```
 
-```shell
-Set timezone
-$ sudo timedatectl set-timezone Asia/Almaty
-```
-
-> NTP Pool Time Servers [Link](https://www.ntppool.org/zone/kz)
-
+**Қазақстандық NTP серверлерге талдау жасау**
 ```shell
 $ dig +short 2.kz.pool.ntp.org
 185.116.194.200
@@ -33,6 +27,14 @@ $ ping -c2 80.241.0.72
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.6 ms
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.2 ms
 ```
+> NTP Pool Time Servers [Link](https://www.ntppool.org/zone/kz)
+
+**NTP серверді конфигурациялау**
+```shell
+Уақыт белдеуін (Time Zone) өзгерту
+$ sudo timedatectl set-timezone Asia/Almaty
+```
+> Time Zones in Kazakhstan [Link](https://www.timeanddate.com/time/zone/kazakhstan)
 
 ```shell
 $ sudo nano /etc/chrony/chrony.conf
@@ -61,27 +63,20 @@ makestep 1.0 3
 ```
 
 ```shell
-Daemon-ды ұайта жүктеу
+Daemon-ды қайта жүктеу
 $ sudo systemctl restart chrony
 ```
 
+**Нәтижені тексеру / Verification**
 ```shell
 $ sudo chronyc sources -v
-
-$ dig +short ntp.nic.kz
-80.241.0.72
-
-$ ping 80.241.0.72
-64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.7 ms
-64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.7 ms
+$ sudo chronyc tracking
 
 $ sudo apt install ntpdate
 $ sudo ntpdate -q 80.241.0.72
-
-$ sudo chronyc tracking
 ```
-![images](images/images.png)
 
+**Жергілікті желіге рұқсат беру (Allow)**
 ```shell
 $ sudo nano /etc/chrony/chrony.conf
 # Allow access for Local Networks
@@ -91,6 +86,7 @@ allow 172.16.12.0/24
 $ sudo systemctl restart chrony
 ```
 
+**nftables конфигурациялау**
 ```shell
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.11.0/24 accept
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.12.0/24 accept
@@ -101,7 +97,7 @@ $ sudo nft list ruleset | sudo tee /etc/nftables.conf
 $ sudo systemctl restart nftables
 ```
 
-#### Configure NTP Client on Linux
+## NTP Client on Linux
 
 ```shell
 Debian/Ubuntu
@@ -133,7 +129,7 @@ $ sudo chronyc makestep
 200 OK
 ```
 
-#### Configure NTP Client on Cisco IOS (Router, Switch)
+## NTP Client on Cisco IOS (Router, Switch)
 
 ```shell
 configure terminal
@@ -160,7 +156,7 @@ access-list 10 permit 172.16.11.1
 ntp access-group peer 10
 ```
 
-#### Configure NTP Client on Huawei VRP (Router, Switch)
+## NTP Client on Huawei VRP (Router, Switch)
 
 ```shell
 system-view
