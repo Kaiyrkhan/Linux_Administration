@@ -133,21 +133,46 @@ $ sudo chronyc makestep
 200 OK
 ```
 
+## NTP Server on Cisco IOS (Router, Switch)
+
+```shell
+configure terminal
+
+clock timezone KZ +5                     // Уақыт белдеуін орнату
+clock set 08:00:00 7 AUG 2025            // Жергілікті уақытты қолмен орнату
+
+ntp master 3                             // NTP сервер болу, stratum 3
+ntp source Loopback50                    // NTP клиенттің сұраныстарына жауап беретін интерфейсті көрсету
+```
+
+```shell
+access-list 10 permit 172.16.11.0 0.0.0.255     // NTP клиенттерге рұқсат беру
+ntp access-group peer 10
+```
+
+```shell
+Нәтижені тексеру / Verification
+
+show ntp status
+show ntp associations
+```
+
 ## NTP Client on Cisco IOS (Router, Switch)
 
 ```shell
 configure terminal
-ntp server 172.16.11.1 prefer        # Жергілікті (LAN) NTP сервердің IP адресі
-clock timezone KZ +5                 # Уақыт белдеуін көрсету
+ntp server 172.16.11.1 prefer        // Жергілікті желідегі (LAN) NTP сервердің IP адресі
+clock timezone KZ +5                 // Уақыт белдеуін орнату
 ```
 
 ```shell
-NTP сұранысы болатын, нақты интерфейсті көрсету
-ntp source GigabitEthernet0/0
+ntp source Loopback50                // NTP серверге сұраныс жіберетін интерфейсті көрсету
+немесе
+ntp source GigabitEthernet1/0/1
 ```
 
 ```shell
-Verification
+Нәтижені тексеру / Verification
 
 show ntp associations
 show ntp status
