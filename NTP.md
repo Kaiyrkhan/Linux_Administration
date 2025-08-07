@@ -137,7 +137,7 @@ $ sudo chronyc makestep
 
 ```shell
 configure terminal
-ntp server 172.16.11.1 prefer        # NTP сервер IP адрес
+ntp server 172.16.11.1 prefer        # Жергілікті (LAN) NTP сервердің IP адресі
 clock timezone KZ +5                 # Уақыт белдеуін көрсету
 ```
 
