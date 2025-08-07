@@ -97,10 +97,10 @@ nftables конфигурациясы
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.11.0/24 accept
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.12.0/24 accept
 
-$ sudo nft list ruleset
-
 $ sudo nft list ruleset | sudo tee /etc/nftables.conf
 $ sudo systemctl restart nftables
+
+$ sudo nft list ruleset
 ```
 
 ```shell
@@ -117,10 +117,31 @@ $ sudo iptables -vnL
 ```
 
 ```shell
+Firewalld конфигурациясы (RHEL/Rocky)
+
+$ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.11.0/24" port protocol="udp" port="123" accept'
+$ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.12.0/24" port protocol="udp" port="123" accept'
+
+$ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" port protocol="udp" port="123" drop'
+
+$ sudo firewall-cmd --reload
+
+$ sudo firewall-cmd --list-all --zone=public
 ```
 
 ```shell
+UFW конфигурациясы (Debian/Ubuntu)
+
+$ sudo ufw enable
+
+$ sudo ufw allow from 172.16.11.0/24 to any port 123 proto udp
+$ sudo ufw allow from 172.16.12.0/24 to any port 123 proto udp
+
+$ sudo ufw deny proto udp from any to any port 123
+
+$ sudo ufw status verbose
 ```
+> UFW - Uncomplicated Firewall  
 
 ## NTP Client on Linux
 
