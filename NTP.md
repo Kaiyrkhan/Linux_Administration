@@ -71,7 +71,7 @@ Daemon-ды қайта жүктеу
 $ sudo systemctl restart chrony
 ```
 
-**Нәтижені тексеру / Verification**
+**Нәтижені тексеру**
 ```shell
 $ sudo chronyc sources -v
 $ sudo chronyc tracking
@@ -121,8 +121,7 @@ $ sudo systemctl restart chrony
 ```
 
 ```shell
-Verification
-
+Нәтижені тексеру
 $ sudo chronyc sources -v
 $ sudo chronyc tracking
 ```
@@ -146,15 +145,14 @@ ntp source Loopback50                    // NTP клиенттің сұраны�
 ```
 
 ```shell
-access-list 10 permit 172.16.11.0 0.0.0.255     // NTP клиенттерге рұқсат беру
-ntp access-group peer 10
+Нәтижені тексеру
+show ntp status
+show ntp associations
 ```
 
 ```shell
-Нәтижені тексеру / Verification
-
-show ntp status
-show ntp associations
+access-list 10 permit 172.16.11.0 0.0.0.255     // NTP клиенттерге рұқсат беру
+ntp access-group peer 10
 ```
 
 ## NTP Client on Cisco IOS (Router, Switch)
@@ -172,39 +170,57 @@ ntp source GigabitEthernet1/0/1
 ```
 
 ```shell
-Нәтижені тексеру / Verification
-
+Нәтижені тексеру
 show ntp associations
 show ntp status
 ```
 
 ```shell
-Қосымша қауіпсіздік (Access Control List)
-
 access-list 10 permit 172.16.11.1
 ntp access-group peer 10
+```
+
+## NTP Server on Huawei VRP (Router, Switch)
+
+```shell
+system-view
+
+clock timezone KZ add 5
+clock datetime 08:00:00 2025-08-07          // Жергілікті уақытты қолмен орнату
+
+ntp-service enable
+ntp-service refclock-master 3              // NTP сервер болу, stratum 3
+```
+
+```shell
+Нәтижені тексеру
+display ntp-service status
+```
+
+```shell
+acl number 2000
+ rule permit ip source 172.16.11.0 0.0.0.255
+ntp-service acl 2000
 ```
 
 ## NTP Client on Huawei VRP (Router, Switch)
 
 ```shell
 system-view
-ntp-service enable
-ntp-service unicast-server 172.16.11.1
 
 clock timezone KZ add 5
+
+ntp-service enable
+ntp-service unicast-server 172.16.11.1
 ```
 
 ```shell
-Verification
-
+Нәтижені тексеру
 display ntp-service status
 display ntp-service sessions
 ```
 
 ```shell
-Қосымша қауіпсіздік (Access Control List)
-
 acl number 2000
  rule permit ip source 172.16.11.1 0.0.0.0
 ntp-service acl 2000
