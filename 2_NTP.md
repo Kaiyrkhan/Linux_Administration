@@ -5,7 +5,7 @@
 
 ## NTP Server on Linux
 
-**chrony пакетін орнату**
+**Chrony пакетін орнату**
 ```shell
 Debian/Ubuntu
 $ sudo apt update 
