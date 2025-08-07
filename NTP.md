@@ -112,6 +112,9 @@ $ sudo iptables -A INPUT -p udp --dport 123 -s 127.0.0.1 -j ACCEPT
 
 $ sudo netfilter-persistent save
 $ sudo netfilter-persistent reload
+немесе
+$ sudo iptables-save > /etc/iptables/rules.v4
+$ sudo systemctl restart iptables
 
 $ sudo iptables -vnL
 ```
