@@ -103,15 +103,17 @@ $ sudo systemctl restart nftables
 ```shell
 Debian/Ubuntu
 $ sudo apt install chrony
+
 RHEL/Rocky
 $ sudo dnf install chrony
+
+$ sudo systemctl status chrony
 ```
 
 ```shell
 $ sudo nano /etc/chrony/chrony.conf
 server 172.16.11.1 iburst
 
-$ sudo systemctl status chrony
 $ sudo systemctl restart chrony
 ```
 
