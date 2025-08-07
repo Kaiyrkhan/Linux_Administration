@@ -27,7 +27,7 @@ $ ping -c2 80.241.0.72
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time15.6 ms
 64 bytes from 80.241.0.72: icmp_seq=1 ttl=53 time16.2 ms
 ```
-> NTP Pool Time Servers [Link](https://www.ntppool.org/zone/kz)
+> NTP Pool Time Servers [Link](https://www.ntppool.org/zone/kz)  
 
 **NTP серверді конфигурациялау**
 ```shell
@@ -86,7 +86,7 @@ allow 172.16.12.0/24
 $ sudo systemctl restart chrony
 ```
 
-**nftables конфигурациялау**
+**Firewall конфигурациялау**
 ```shell
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.11.0/24 accept
 $ sudo nft add rule inet filter input udp dport 123 ip saddr 172.16.12.0/24 accept
