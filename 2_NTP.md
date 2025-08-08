@@ -4,11 +4,12 @@
 2) Cisco IOS (Router, Switch);
 3) Huawei VRP (Router, Switch).
 
-### 🖧 Topology
-![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)  
-
 ## NTP Server using Chrony on Linux
 
+**🖧 Желі топологиясы**  
+![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)  
+
+**Chrony пакетін орнату**
 ```shell
 Debian/Ubuntu/Rocky/Oracle
 Package атауы: chrony
@@ -23,7 +24,6 @@ chronyd – the actual daemon to sync and serve via the Network Time Protocol
 chronyc – command-line interface for the chrony daemon
 ```
 
-**Chrony пакетін орнату**
 ```shell
 Debian/Ubuntu
 $ sudo apt update 
