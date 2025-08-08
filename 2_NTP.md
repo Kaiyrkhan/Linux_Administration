@@ -104,6 +104,8 @@ $ sudo ntpdate -q 80.241.0.72
 
 **Жергілікті желіге рұқсат беру (Allow)**
 ```shell
+NTP security (optional)
+
 RHEL/Rocky/Oracle
 $ sudo vi /etc/chrony.conf
 
