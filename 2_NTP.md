@@ -71,7 +71,6 @@ $ sudo nano /etc/chrony/chrony.conf
 # Kazakhstan NTP pool
 server ntp.nic.kz iburst
 pool 2.kz.pool.ntp.org iburst
-pool 1.kz.pool.ntp.org iburst
 
 # Global NTP pool
 pool time.google.com iburst
