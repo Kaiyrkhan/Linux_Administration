@@ -349,6 +349,30 @@ acl number 2000
 ntp-service acl 2000
 ```
 
+## NTP Server using ntpd on Oracle Linux 7.9
+```shell
+$ sudo yum install ntp
+```
+
+```shell
+$ sudo vi /etc/ntp.conf
+
+server ntp.nic.kz iburst
+pool 2.kz.pool.ntp.org iburst
+
+# ішкі желіге рұқсат беру
+restrict 172.16.11.0 mask 255.255.255.0 nomodify notrap
+restrict 172.16.12.0 mask 255.255.255.0 nomodify notrap
+
+# Барлық басқа сұранысты шектеу
+restrict default ignore
+```
+
+```shell
+$ ntpq -p
+$ ntpstat
+```
+
 ## References
 
 1) [Setting the Date and Time on openEuler](https://docs.openeuler.org/en/docs/20.03_LTS/docs/Administration/basic-configuration.html)
