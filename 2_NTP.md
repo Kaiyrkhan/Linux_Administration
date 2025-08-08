@@ -148,6 +148,8 @@ $ sudo iptables -vnL
 ```shell
 Firewalld конфигурациясы (RHEL/Rocky)
 
+$ sudo systemctl status firewalld
+
 $ sudo firewall-cmd --permanent --add-port=123/udp
 $ sudo firewall-cmd --permanent --add-service=ntp
 немесе
@@ -164,6 +166,8 @@ $ sudo firewall-cmd --list-all --zone=public
 
 ```shell
 UFW конфигурациясы (Debian/Ubuntu)
+
+$ sudo systemctl status ufw
 
 $ sudo ufw enable
 
