@@ -309,4 +309,4 @@ ntp-service acl 2000
 
 ## References
 
-1) [Setting the Date and Time](https://docs.openeuler.org/en/docs/20.03_LTS/docs/Administration/basic-configuration.html)
+1) [Setting the Date and Time on openEuler](https://docs.openeuler.org/en/docs/20.03_LTS/docs/Administration/basic-configuration.html)
