@@ -8,6 +8,9 @@
 ```shell
 Package атауы: chrony
 Daemon/Service атауы: chrony немесе chronyd
+
+chronyd – the actual daemon to sync and serve via the Network Time Protocol
+chronyc – command-line interface for the chrony daemon
 ```
 
 **Chrony пакетін орнату**
