@@ -306,3 +306,7 @@ acl number 2000
  rule permit ip source 172.16.11.1 0.0.0.0
 ntp-service acl 2000
 ```
+
+## References
+
+1) [Setting the Date and Time](https://docs.openeuler.org/en/docs/20.03_LTS/docs/Administration/basic-configuration.html)
