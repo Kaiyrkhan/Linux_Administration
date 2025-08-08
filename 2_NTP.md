@@ -217,6 +217,18 @@ $ sudo chronyc makestep
 200 OK
 ```
 
+```shell
+Synchronizing Time
+
+$ sudo date +%T -s "16:35:55"
+$ sudo date -s "2025-08-08 16:35:55"
+
+$ sudo apt install ntpdate
+$ ntpdate -u 172.16.11.1
+
+$ date
+```
+
 ## NTP Server on Cisco IOS (Router, Switch)
 
 ```shell
