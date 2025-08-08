@@ -101,16 +101,15 @@ $ sudo apt install ntpdate
 $ sudo ntpdate -q 80.241.0.72
 ```
 
-**Жергілікті желіге рұқсат беру (Allow)**
+**Жергілікті желіге рұқсат беру / NTP Security (optional)**
 ```shell
-NTP security (optional)
-
 RHEL/Rocky/Oracle
 $ sudo vi /etc/chrony.conf
 
 Debian/Ubuntu
 $ sudo nano /etc/chrony/chrony.conf
-# Allow access for Local Networks
+
+# Allow NTP client access from Local Network
 allow 172.16.11.0/24
 allow 172.16.12.0/24
 
