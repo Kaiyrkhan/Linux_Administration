@@ -3,7 +3,7 @@
 ### 🖧 Topology
 ![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)  
 
-## NTP Server on Linux (Debian, Ubuntu, Rocky)
+## NTP Server using chrony on Linux (Debian, Ubuntu, Rocky)
 
 ```shell
 Debian/Ubuntu/Rocky/Oracle
@@ -181,7 +181,7 @@ $ sudo ufw deny proto udp from any to any port 123
 $ sudo ufw status verbose
 ```
 
-## NTP Client on Linux
+## NTP Client using chrony on Linux
 
 ```shell
 Debian/Ubuntu
