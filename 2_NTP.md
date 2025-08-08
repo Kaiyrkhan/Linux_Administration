@@ -189,7 +189,7 @@ $ sudo systemctl status chronyd
 
 ```shell
 RHEL/Rocky/Oracle
-$ sudo nano /etc/chrony.conf
+$ sudo vi /etc/chrony.conf
 server 172.16.11.1 iburst
 
 Debian/Ubuntu
