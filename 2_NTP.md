@@ -6,13 +6,13 @@
 ## NTP Server on Linux (Debian, Ubuntu, Rocky)
 
 ```shell
-Debian/Ubuntu/Rocky
+Debian/Ubuntu/Rocky/Oracle
 Package атауы: chrony
 
 Debian/Ubuntu
 Daemon/Service атауы: chrony немесе chronyd
 
-RHEL/Rocky
+RHEL/Rocky/Oracle
 Daemon/Service атауы: chronyd
 
 chronyd – the actual daemon to sync and serve via the Network Time Protocol
