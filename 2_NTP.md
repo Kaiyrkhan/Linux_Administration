@@ -3,7 +3,7 @@
 ### 🖧 Topology
 ![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)  
 
-## NTP Server on Linux
+## NTP Server on Linux (Debian, Ubuntu, Rocky)
 
 **Chrony пакетін орнату**
 ```shell
@@ -41,6 +41,10 @@ $ sudo timedatectl set-timezone Asia/Almaty
 > *Time Zones in Kazakhstan* [Link](https://www.timeanddate.com/time/zone/kazakhstan)
 
 ```shell
+RHEL/Rocky
+$ sudo vi /etc/chrony.conf
+
+Debian/Ubuntu
 $ sudo nano /etc/chrony/chrony.conf
 
 8-қатарды (Line 8) "#" comment-ге алып, төменгі қатарға Қазақстанға ең жақын NTP сервердің DNS атауын енгіземіз!
@@ -82,12 +86,19 @@ $ sudo ntpdate -q 80.241.0.72
 
 **Жергілікті желіге рұқсат беру (Allow)**
 ```shell
+RHEL/Rocky
+$ sudo vi /etc/chrony.conf
+
+Debian/Ubuntu
 $ sudo nano /etc/chrony/chrony.conf
 # Allow access for Local Networks
 allow 172.16.11.0/24
 allow 172.16.12.0/24
 
+Debian/Ubuntu
 $ sudo systemctl restart chrony
+RHEL/Rocky
+$ sudo systemctl restart chronyd
 ```
 
 **Firewall конфигурациялау**
