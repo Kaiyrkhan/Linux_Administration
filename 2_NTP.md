@@ -5,6 +5,11 @@
 
 ## NTP Server on Linux (Debian, Ubuntu, Rocky)
 
+```shell
+Package атауы: chrony
+Daemon/Service атауы: chrony немесе chronyd
+```
+
 **Chrony пакетін орнату**
 ```shell
 Debian/Ubuntu
