@@ -352,3 +352,4 @@ ntp-service acl 2000
 2) [Configuring the Date and Time on RHEL](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-configuring_the_date_and_time)
 3) [Configuring NTP using the chrony on RHEL](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ntp_using_the_chrony_suite)
 4) [Configuring NTP using ntpd on RHEL](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ntp_using_ntpd)
+5) [Configuring Clock Synchronization](https://support.huawei.com/enterprise/en/doc/EDOC1100292513/a51c8e62/configuring-clock-synchronization)
