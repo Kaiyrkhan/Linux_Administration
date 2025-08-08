@@ -215,6 +215,7 @@ $ sudo chronyc sources -v
 $ sudo chronyc tracking
 ```
 
+**Қосымша ақпарат**
 ```shell
 Уақытты қолмен синхрондау (тексеру үшін)
 $ sudo chronyc makestep
@@ -235,7 +236,6 @@ $ ntpdate -u 172.16.11.1        //  егер firewall кедергі жасас�
 $ date
 ```
 
-**Қосымша ақпарат**
 ```shell
 RTC (Real Time Clock) – Hardware Clock, BIOS уақыты
 $ sudo hwclock -r
@@ -247,7 +247,6 @@ System Clock пен RTC (BIOS) уақыттың айырмасын тексер�
 $ timedatectl
 немесе
 $ echo "RTC: $(sudo hwclock -r)"; echo "System: $(date)"
-
 
 System to Hardware clock (аппараттық уақытты жүйелік уақытпен теңестіру)
 $ sudo hwclock --systohc
