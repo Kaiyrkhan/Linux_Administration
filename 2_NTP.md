@@ -6,8 +6,14 @@
 ## NTP Server on Linux (Debian, Ubuntu, Rocky)
 
 ```shell
+Debian/Ubuntu/Rocky
 Package атауы: chrony
+
+Debian/Ubuntu
 Daemon/Service атауы: chrony немесе chronyd
+
+RHEL/Rocky
+Daemon/Service атауы: chronyd
 
 chronyd – the actual daemon to sync and serve via the Network Time Protocol
 chronyc – command-line interface for the chrony daemon
@@ -18,10 +24,10 @@ chronyc – command-line interface for the chrony daemon
 Debian/Ubuntu
 $ sudo apt update 
 $ sudo apt install chrony
-$ sudo systemctl status chrony
 
-RHEL/Rocky
+RHEL/Rocky/Oracle
 $ sudo dnf install chrony
+
 $ sudo systemctl status chronyd
 ```
 
@@ -51,7 +57,7 @@ $ sudo timedatectl set-timezone Asia/Almaty
 > *Time Zones in Kazakhstan* [Link](https://www.timeanddate.com/time/zone/kazakhstan)
 
 ```shell
-RHEL/Rocky
+RHEL/Rocky/Oracle
 $ sudo vi /etc/chrony.conf
 
 Debian/Ubuntu
@@ -82,10 +88,6 @@ makestep 1.0 3
 
 ```shell
 Daemon-ды қайта жүктеу
-
-Debian/Ubuntu
-$ sudo systemctl restart chrony
-RHEL/Rocky
 $ sudo systemctl restart chronyd
 ```
 
@@ -100,7 +102,7 @@ $ sudo ntpdate -q 80.241.0.72
 
 **Жергілікті желіге рұқсат беру (Allow)**
 ```shell
-RHEL/Rocky
+RHEL/Rocky/Oracle
 $ sudo vi /etc/chrony.conf
 
 Debian/Ubuntu
@@ -109,9 +111,6 @@ $ sudo nano /etc/chrony/chrony.conf
 allow 172.16.11.0/24
 allow 172.16.12.0/24
 
-Debian/Ubuntu
-$ sudo systemctl restart chrony
-RHEL/Rocky
 $ sudo systemctl restart chronyd
 ```
 
@@ -147,6 +146,7 @@ $ sudo iptables -vnL
 ```shell
 Firewalld конфигурациясы (RHEL/Rocky)
 
+$ sudo firewall-cmd --permanent --add-port=123/udp
 $ sudo firewall-cmd --permanent --add-service=ntp
 немесе
 $ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.11.0/24" port protocol="udp" port="123" accept'
@@ -181,17 +181,22 @@ $ sudo ufw status verbose
 Debian/Ubuntu
 $ sudo apt install chrony
 
-RHEL/Rocky
+RHEL/Rocky/Oracle
 $ sudo dnf install chrony
 
-$ sudo systemctl status chrony
+$ sudo systemctl status chronyd
 ```
 
 ```shell
+RHEL/Rocky/Oracle
+$ sudo nano /etc/chrony.conf
+server 172.16.11.1 iburst
+
+Debian/Ubuntu
 $ sudo nano /etc/chrony/chrony.conf
 server 172.16.11.1 iburst
 
-$ sudo systemctl restart chrony
+$ sudo systemctl restart chronyd
 ```
 
 ```shell
