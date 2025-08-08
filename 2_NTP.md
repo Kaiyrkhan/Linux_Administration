@@ -1,8 +1,8 @@
 # Configure NTP Server and Client on Multiple Platforms
 
-1) NTP using Chrony on Linux;
-2) NTP on Cisco IOS;
-3) NTP on Huawei VRP.
+1) Linux (Debian, Ubuntu, Rocky);
+2) Cisco IOS (Router, Switch);
+3) Huawei VRP (Router, Switch).
 
 ### 🖧 Topology
 ![Topology](https://raw.githubusercontent.com/Kaiyrkhan/Linux_Administration_101/main/Topology/Topology_interVLANRouting_NAT_Linux.png)  
