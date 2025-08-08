@@ -218,15 +218,38 @@ $ sudo chronyc makestep
 ```
 
 ```shell
-Synchronizing Time
-
+Жүйелік уақытты қолмен өзгерту
 $ sudo date +%T -s "16:35:55"
 $ sudo date -s "2025-08-08 16:35:55"
 
+Уақытты синхрондау (Synchronizing Time)
 $ sudo apt install ntpdate
-$ ntpdate -u 172.16.11.1
+$ ntpdate 172.16.11.1
+немесе
+$ ntpdate -u 172.16.11.1        //  егер firewall кедергі жасаса қолдану 
 
 $ date
+```
+
+**Қосымша ақпарат**
+```shell
+RTC (Real Time Clock) – Hardware Clock, BIOS уақыты
+$ sudo hwclock -r
+
+System Clock – жүйелік уақыт
+$ date
+
+System Clock пен RTC (BIOS) уақыттың айырмасын тексеру
+$ timedatectl
+немесе
+$ echo "RTC: $(sudo hwclock -r)"; echo "System: $(date)"
+
+
+System to Hardware clock (аппараттық уақытты жүйелік уақытпен теңестіру)
+$ sudo hwclock --systohc
+
+Hardware to System clock (жүйелік уақытты аппараттық уақытпен теңестіру)
+$ sudo hwclock --hctosys
 ```
 
 ## NTP Server on Cisco IOS (Router, Switch)
