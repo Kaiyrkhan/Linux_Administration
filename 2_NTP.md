@@ -53,6 +53,8 @@ $ ping -c2 80.241.0.72
 ```shell
 Уақыт белдеуін (Time Zone) өзгерту
 $ sudo timedatectl set-timezone Asia/Almaty
+
+$ timedatectl status
 ```
 > *Time Zones in Kazakhstan* [Link](https://www.timeanddate.com/time/zone/kazakhstan)
 
