@@ -122,6 +122,8 @@ $ sudo iptables -vnL
 ```shell
 Firewalld конфигурациясы (RHEL/Rocky)
 
+$ sudo firewall-cmd --permanent --add-service=ntp
+немесе
 $ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.11.0/24" port protocol="udp" port="123" accept'
 $ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.12.0/24" port protocol="udp" port="123" accept'
 
@@ -138,6 +140,8 @@ UFW конфигурациясы (Debian/Ubuntu)
 
 $ sudo ufw enable
 
+$ sudo ufw allow 123/udp
+немесе
 $ sudo ufw allow from 172.16.11.0/24 to any port 123 proto udp
 $ sudo ufw allow from 172.16.12.0/24 to any port 123 proto udp
 
