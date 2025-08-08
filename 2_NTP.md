@@ -10,9 +10,11 @@
 Debian/Ubuntu
 $ sudo apt update 
 $ sudo apt install chrony
+$ sudo systemctl status chrony
 
 RHEL/Rocky
 $ sudo dnf install chrony
+$ sudo systemctl status chronyd
 ```
 
 **Қазақстандық NTP серверлерге талдау жасау**
@@ -72,7 +74,11 @@ makestep 1.0 3
 
 ```shell
 Daemon-ды қайта жүктеу
+
+Debian/Ubuntu
 $ sudo systemctl restart chrony
+RHEL/Rocky
+$ sudo systemctl restart chronyd
 ```
 
 **Нәтижені тексеру**
