@@ -352,6 +352,8 @@ ntp-service acl 2000
 ## NTP Server using ntpd on Oracle Linux 7.9
 ```shell
 $ sudo yum install ntp
+
+$ sudo systemctl status ntpd
 ```
 
 ```shell
@@ -366,9 +368,12 @@ restrict 172.16.12.0 mask 255.255.255.0 nomodify notrap
 
 # Барлық басқа сұранысты шектеу
 restrict default ignore
+
+$ sudo systemctl restart ntpd
 ```
 
 ```shell
+Нәтижені тексеру
 $ ntpq -p
 $ ntpstat
 ```
