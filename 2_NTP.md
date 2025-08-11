@@ -100,6 +100,7 @@ $ sudo systemctl restart chronyd
 ```shell
 $ sudo chronyc sources -v
 $ sudo chronyc tracking
+$ sudo chronyc activity
 
 $ sudo apt install ntpdate
 $ sudo ntpdate -q 80.241.0.72
