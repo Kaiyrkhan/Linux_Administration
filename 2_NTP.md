@@ -230,6 +230,7 @@ $ sudo date -s "2025-08-08 16:35:55"
 
 Уақытты синхрондау (Synchronizing Time)
 $ sudo apt install ntpdate
+
 $ sudo ntpdate 172.16.11.1
 немесе
 $ sudo ntpdate -u 172.16.11.1        //  егер firewall кедергі жасаса қолдану 
