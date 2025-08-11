@@ -33,6 +33,9 @@ RHEL/Rocky/Oracle
 $ sudo dnf install chrony
 
 $ sudo systemctl status chronyd
+
+$ ss -tulpn
+$ netstat -tulpn
 ```
 
 **Қазақстандық NTP серверлерге талдау жасау**
